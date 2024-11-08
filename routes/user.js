@@ -20,4 +20,8 @@ router.route("/login")
 
 router.get("/logout",usercontroller.logout);
 
+router.get("",(req,res)=>{
+    res.redirect("/listing");
+});
+
 module.exports=router;
