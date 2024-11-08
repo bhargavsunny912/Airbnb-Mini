@@ -1,0 +1,60 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <h3 style="text-align: center;" class="text-danger mt-5">CREATE NEW LISTING</h3>
+    <div class="row">
+        <div class="col-8 offset-2">
+            <form action="/listing" method="post" class="needs-validation" novalidate enctype="multipart/form-data">
+                <div class="mb-2">
+                     <label for="title" class="form-label">Add a title</label>
+                     <input type="text" id="title" name="title" class="form-control" placeholder="Lakshadeep" required>
+                     <div class="valid-feedback">Nice title !</div>
+                     <div class="invalid-feedback">Please enter a valid title</div>
+                </div>
+                <div class="mb-2">
+                     <label for="desc" class="form-label">Add a Description</label>
+                     <textarea name="description" id="desc" rows="3" cols="20" class="form-control" placeholder="About the post" required></textarea>
+                     <div class="invalid-feedback">Please enter a brief description of title</div>
+                </div>
+                <div class="row">
+                    <div class="mb-2 col-md-4">
+                        <label for="price" class="form-label">Add a Price</label>
+                        <input type="number" required id="price" name="price" class="form-control" placeholder="15000">
+                        <div class="invalid-feedback">Please enter a valid price</div>
+                    </div>
+                   <div class="mb-2 col-md-8">
+                       <label for="country" class="form-label">Add a country</label>
+                       <input type="text" required id="country" name="country" class="form-control" placeholder="India">
+                       <div class="invalid-feedback">Please enter a valid country</div>
+                   </div>
+                </div>
+                 <div class="mb-2">
+                     <label for="image" class="form-label">Add Image file</label>
+                     <input type="file" id="image" name="file" class="form-control" required>
+                     <div class="invalid-feedback">Please enter a valid image file</div>
+                 </div>
+                 <div class="row">
+                    <div class="mb-2 col-md-6">
+                        <label for="location" class="form-label">Add a Location</label>
+                        <input type="text" required id="loaction" name="location" class="form-control" placeholder="Hyderabad,telangana">
+                        <div class="invalid-feedback">Please enter a valid location of title</div>
+                    </div>
+                    <div class="mb-2 col-md-6">
+                        <label for="category" class="form-label">Select Category</label>
+                        <select class="form-select" aria-label="Default select example" id="category" required name="category">
+                            <option value="Rooms">Rooms</option>
+                            <option value="Farms">Farms</option>
+                            <option value="Amazingpools">Amazingpools</option>
+                            <option value="Cabins">Cabins</option>
+                            <option value="Beachfront">Beachfront</option>
+                            <option value="Treehouses">Treehouses</option>
+                            <option value="Lakepoints">Lakepoints</option>
+                            <option value="Twincitys">Twincitys</option>
+                            <option value="Castles">Castles</option>
+                          </select>
+                    </div>
+                 </div>
+                 <div class="text-center"><button class="btn btn-danger m-3">Add Listing</button></div>
+             </form>    
+        </div>
+    </div>
+</body>
