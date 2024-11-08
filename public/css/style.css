@@ -55,6 +55,11 @@ main{margin: 2vh 5vw !important;}
 .filter a{color: black;text-decoration: none;}
 .filter:hover{opacity: 1;cursor: pointer;}
 
+@media (max-width:1200px){
+    .taxswitch{display: none;}
+    .tax{border: 0px !important;}
+}
+
 @media (min-width:990px) and (max-width:1200px){
     .filter p{font-size: 0.7rem;}
     #filters{gap:1.5rem}
