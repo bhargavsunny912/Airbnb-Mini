@@ -2,7 +2,7 @@
 <body>
     <h3 class="edit text-danger mt-4">Edit Listing</h3>
     <div class="row">
-        <div class="col-8 offset-2">
+        <div class="editpostform">
             <form action="/listing/<%= listing._id %>?_method=put" method="post" novalidate class="needs-validation" enctype="multipart/form-data">
 
                 <div>
@@ -42,7 +42,7 @@
                     <div class="invalid-feedback mx-3">Please enter a valid Location</div>
                 </div>
 
-                <div class="text-center"><button class="btn btn-danger m-3">Edit Post</button></div>
+                <div class="text-center"><button class="btn btn-danger m-3 mt-4">Edit Post</button></div>
             </form> 
         </div>
     </div>

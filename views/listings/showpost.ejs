@@ -3,7 +3,7 @@
     <h3 class="text-center text-danger ls-details mt-4">Listings Details</h3>
  
     <div class="row">
-        <div class="col-6 offset-3">
+        <div class="col-lg-6 responsive">
             <div class="card col-12">
                 <img src="<%= listing.image.url %>" class="card-img-top mb-2" alt="listing images">
                 <div class="card-body">
@@ -18,12 +18,12 @@
                   </p>
                  <% if(currentuser && currentuser._id.equals(listing.owner._id)){ %>
                   <div class="showbtn">
-                    <a href="/listing/<%= listing._id %>/edit" class="btn btn-danger mt-3 offset-2">Edit Post</a>
+                    <a href="/listing/<%= listing._id %>/edit" class="btn btn-danger mt-3">Edit Post</a>
                     <form action="/listing/<%= listing._id %>?_method=delete" method="post"><button class="btn btn-danger mt-3">Delete Post</button></form>
                   </div>
                 <% } %>
                 <% if(currentuser && !currentuser._id.equals(listing.owner._id)) { %>
-                  <button class="btn btn-danger btn-lg mt-4 offset-5">Reserve</button>
+                  <button class="btn btn-danger mt-4 offset-5">Reserve</button>
                 <% } %>
                   
                 </div>
@@ -52,7 +52,7 @@
                       <label for="msg" class="form-label">Leave a Message</label>
                       <textarea name="message" id="msg" class="form-control" rows="4" required></textarea>
                       <div class="invalid-feedback">Plaese a valid comment over post</div>
-                      <input type="submit" class="btn btn-dark mt-3">
+                      <input type="submit" class="btn btn-dark mt-3 offset-5">
                   </form>
                   <hr>
                 <% } %>
@@ -61,7 +61,7 @@
                 <h4 class="text-center text-danger">All Reviews</h4>
                 <div class="row">
                   <% for( review of listing.reviews) { %>
-                    <div class="card card-border col-5 ms-4 mt-3 review-card">
+                    <div class="card card-border col-10 ms-4 mt-3 review-card">
                       <div class="card-body p-1">
                         <h6 class="card-title"> @ <%= review.author.username %></h6>
                         <p class="starability-result" data-rating="<%= review.rating %>"></p>

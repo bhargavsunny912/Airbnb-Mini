@@ -34,7 +34,7 @@ main{margin: 2vh 5vw !important;}
 /* show */
 .card-img-top{height: 50vh;}
 .ls-details{margin-bottom: 0vh !important;}
-.showbtn{display: flex;gap:10vw}
+.showbtn{display: flex;gap:10vw;justify-content:space-around;}
 
 /* cards review*/
 
@@ -63,16 +63,30 @@ main{margin: 2vh 5vw !important;}
 @media (min-width:990px) and (max-width:1200px){
     .filter p{font-size: 0.7rem;}
     #filters{gap:1.5rem}
+    .responsive{
+        margin-left: 20vw !important;
+    }
+    .flash{margin: 5vh 20vw !important;}
+    .newpostform,.signupform,.editpostform{width: 70% !important;margin:1px auto !important;}
 }
 @media (min-width:770px) and (max-width:990px){
     .filter p{font-size: 0.7rem;}
     #filters{gap:1.5rem}
     .small{display: none;}
+    .flash{margin: 5vh 20vw !important;}
+    .newpostform,.signupform,.editpostform{width: 70% !important;margin:1px auto !important;}
 }
 @media (max-width:768px){
     #filters{display: none;}
 }
-
+@media (min-width:400px) and (max-width:769px){
+    .responsive{width: 100% !important;}
+}
+@media(min-width:1200px) and (max-width:1660px){
+    .flash{margin: 5vh 20vw !important;}
+    .newpostform,.signupform,.editpostform{width: 60% !important;margin:1px auto !important;}
+}
+    
 .tax{height: 3rem !important;border: 1px solid rgb(150, 150, 150);border-radius: 1rem;display:flex;align-items: center;justify-content: center; width: 15rem;}
 .tax:hover{background-color:rgb(240, 240, 240);border-color: black;}
 .tax-info{display: none;}
@@ -88,3 +102,10 @@ main{margin: 2vh 5vw !important;}
 .social-icons>a>i{margin: 0rem 1rem;font-size:1.5rem;color: black;}
 .copyright p{margin-bottom: 0%;padding: 1rem;}
 .icons p{padding-bottom: 1rem;}
+
+.responsive{
+    margin: 10px auto !important;
+}
+
+.login{margin:10px auto !important}
+.loginbtn,.signupbtn{display: flex;justify-content: center;align-items: center;height: 15vh;}
