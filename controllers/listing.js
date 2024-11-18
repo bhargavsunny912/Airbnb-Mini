@@ -90,3 +90,10 @@ module.exports.search=async(req,res)=>{
     let searchlist=await Listing.find({$or:[{title:{$regex:`${search}`,$options:'i'}},{country:{$regex:`${search}`,$options:'i'}},{location:{$regex:`${search}`,$options:'i'}}]});
     res.render("listings/searchpage.ejs",{searchlist});
 };
+
+module.exports.reserve=async(req,res)=>{
+    let {id}=req.params;
+    let d=new Date;
+    let listing=await Listing.findById(`${id}`).populate("owner");
+    res.render("listings/reserve.ejs",{listing,d});
+};

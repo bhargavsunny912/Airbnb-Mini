@@ -1,0 +1,99 @@
+<% layout("layouts/boilerplate") %>
+
+<style>
+    /* Your overall website styles */
+
+/* Order Summary Styles */
+.order-summary{
+    border: 2px solid crimson;
+    padding: 20px;border-radius: 3vh;
+    display: flex;justify-content: space-between;
+}
+.payment-summary {
+    border: 2px solid crimson;
+    padding:20px 50px;border-radius: 3vh;
+}
+.order{
+    color: crimson;font-size: 5vh;margin:2vh 0vh 5vh 0vh;
+}
+/* Payment Form Styles */
+form {
+    margin-top: 20px;
+}
+main{
+    margin: 0% !important;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.reserve{
+    display:grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 1;
+    gap:3vw;
+}
+.orders{
+    margin-bottom: 20vh;
+}
+.paybtn{
+    margin: 5vh auto;
+}
+.reserve-img{
+    border-radius:3vh;height:58vh;width:70vh;
+}
+</style>
+
+    <main class="reserve">
+        <div class="orders">
+            <h1 class="order">Order Summary</h1>
+            <div class="order-summary">
+                <div>
+                    <h4 class="order">Booking Details</h4>
+                    <p><strong>Check-in :</strong> <span id="check-in"><%= d.getDate() %> / <%= d.getMonth() %> / <%= d.getFullYear() %></span></p>
+                    <p><strong>Check-out :</strong> <span id="check-out"></span><%= d.getDate()+7 %> / <%= d.getMonth() %> / <%= d.getFullYear() %></p>
+                    <p><strong>Owned by :</strong> <span id="guests"><%= listing.owner.username %></span></p>
+                    <p><strong>Property :</strong> <span id="property-name"><%= listing.title %></span></p>
+                    <p><strong>Price :</strong> <span id="total-price"><%= listing.price %></span></p>
+                    <p><strong>GST :</strong> <span id="total-price"><%= 18 %>%</span></p>
+                    <p><strong>Total Price :</strong> <span id="total-price"><%= listing.price+(listing.price*18/100) %>/--  (Including All The Taxes .)</span></p>
+                </div>
+                <img src="<%= listing.image.url %>" alt="<%= listing.title %>" class="reserve-img">
+            </div>
+        </div>
+
+        <div class="payments">
+            <h2 class="order">Payment Information</h2>
+            <form action="#" method="POST" class="payment-summary">
+                <label for="card-number">Card Number:</label>
+                <input type="text" id="card-number" name="card-number" required>
+
+                <label for="card-expiry">Card Expiry:</label>
+                <input type="text" id="card-expiry" name="card-expiry" required>
+
+                <label for="card-cvc">CVC:</label>
+                <input type="text" id="card-cvc" name="card-cvc" required><br>
+
+                <button type="submit" class="paybtn">Confirm and Pay</button>
+            </form>
+        </div>
+    </main>
+
+   
+
+

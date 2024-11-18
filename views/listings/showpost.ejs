@@ -21,11 +21,11 @@
                     <a href="/listing/<%= listing._id %>/edit" class="btn btn-danger mt-3">Edit Post</a>
                     <form action="/listing/<%= listing._id %>?_method=delete" method="post"><button class="btn btn-danger mt-3">Delete Post</button></form>
                   </div>
-                <% } %>
-                <% if(currentuser && !currentuser._id.equals(listing.owner._id)) { %>
-                  <button class="btn btn-danger mt-4 offset-5">Reserve</button>
-                <% } %>
-                  
+                <% } else { %>
+                  <form action="/listing/<%= listing._id %>/reserve" method="get">
+                    <button class="btn btn-danger mt-4 offset-5">Reserve</button>
+                  </form>
+                <% } %> 
                 </div>
               </div>
               <hr>

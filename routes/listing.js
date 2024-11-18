@@ -32,4 +32,8 @@ router.route("/:id")
 
 router.get("/:id/edit",isloggedin,wrapAsync(listingcontroller.editlistingform));
 
+//Reserve listing
+
+router.get("/:id/reserve",isloggedin,wrapAsync(listingcontroller.reserve));
+
 module.exports=router;
