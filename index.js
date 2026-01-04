@@ -27,7 +27,9 @@ let url=process.env.Altas_url;
 
 Main().then((res)=>{console.log("connection sucess")}).catch((err)=>{console.log(err)})
 async function Main(){
-    await mongoose.connect(url);    
+    await mongoose.connect(url,{
+        family:4,
+    });    
 }
 
 const store=MongoStore.create({
