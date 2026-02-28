@@ -8,7 +8,6 @@ A full-stack Airbnb Clone web application that allows users to search, explore, 
 
 This application allows users to:
 
-- 🔍 Search hotels based on location
 - 🏨 View hotel details (price, description, ratings, reviews, availability status)
 - 📅 Book hotels (shows occupied if already booked)
 - ❤️ Add hotels to wishlist
@@ -34,7 +33,7 @@ This application allows users to:
 - Express.js
 - EJS (Server-Side Rendering)
 - MongoDB (Database)
-- Mongoose (ODM)
+- Mongoose 
 
 ## 🔐 Authentication & Security
 - JWT (JSON Web Token)
@@ -46,7 +45,6 @@ This application allows users to:
 
 ## 📩 Other Integrations
 - Nodemailer (Email Service)
-
 ---
 
 # ✨ Core Features
@@ -61,20 +59,6 @@ This application allows users to:
   - Type of hotel
   - Availability status (Occupied / Available)
 - Dynamic rendering using SSR (EJS)
-
----
-
-## 🔍 Smart Location Search
-- Users can search nearby locations
-- Displays hotels based on search input
-- Designed for travel and holiday stays
-
----
-
-## 📅 Booking System
-- Users can book available hotels
-- Prevents double booking
-- Shows “Occupied” if already booked
 
 ---
 
@@ -112,11 +96,6 @@ This application allows users to:
 - Reduces database load
 - Speeds up frequently accessed routes
 
----
-
-
----
-
 # 🧠 Additional Features Implemented
 
 - Server-Side Rendering (SSR) using EJS
@@ -141,9 +120,7 @@ Planned improvements to make this production-ready and scalable:
 5. 🌍 Add new tourist locations dynamically
 6. 📊 Add admin dashboard for managing hotels & users
 7. 📝 Add advanced review & rating moderation
-8. 📱 Make fully responsive for all devices
-9. ☁ Deploy with Docker & CI/CD pipeline
-10. 🌎 Add map integration (Google Maps API)
+8. 🌎 Add map integration (Google Maps API)
 
 ---
 
@@ -154,7 +131,6 @@ Planned improvements to make this production-ready and scalable:
 - HTTP-only cookies
 - Rate limiting middleware
 - Secure route protection
-- Input sanitization
 - Error handling middleware
 
 ---
@@ -168,15 +144,6 @@ Stores:
 - Bookings
 - Reviews
 - Wishlist
-
-Each hotel contains:
-- Location
-- Type
-- Rating
-- Reviews
-- Price
-- Description
-- Availability status
 
 ---
 
@@ -198,6 +165,6 @@ npm install
 npm start
 
 ```
-# 👨‍💻 Author
+# 👨‍💻 Author - Bhargav Penta
 
 Developed as a Major Project – Airbnb Clone (Travel & Holiday Booking Web Application)
