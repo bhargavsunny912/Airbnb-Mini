@@ -15,7 +15,7 @@ const passportlocal=require("passport-local");
 const Usermodel=require("./models/user");
 const userroute=require("./routes/user");
 
-app.engine("ejs",ejsMate);
+app.engine("ejs",ejsMate); 
 app.use(methodoverride("_method"));
 app.use(express.static(path.join(__dirname,"/public")));
 app.set("views engine","ejs");

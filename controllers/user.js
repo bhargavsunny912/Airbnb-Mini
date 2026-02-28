@@ -3,7 +3,7 @@ const Usermodel=require("../models/user");
 module.exports.signupform=(req,res)=>{
     res.render("users/signup.ejs");
 };
-
+ 
 module.exports.signup=async(req,res)=>{
     try{
         let {username,password,email}=req.body;

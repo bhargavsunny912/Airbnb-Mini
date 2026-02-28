@@ -6,7 +6,7 @@ const { postredirect } = require("../utils/middleware");
 const usercontroller=require("../controllers/user");
 
 //callbacks= usercontroller.signupform
-
+ 
 router.route("/signup")
     .get(usercontroller.signupform)  
     .post(usercontroller.signup);

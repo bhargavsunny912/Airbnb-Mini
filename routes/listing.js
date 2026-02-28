@@ -1,7 +1,7 @@
 if(process.env.NODE_ENV !="production"){
 require("dotenv").config();
 }
-
+ 
 const express=require("express");
 const router=express.Router();  //express object has router method and it creates a new router object ,we use it instead of app object
 const wrapAsync=require("../utils/wrapAsync");

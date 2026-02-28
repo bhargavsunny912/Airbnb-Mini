@@ -1,6 +1,6 @@
 const Listing=require("../models/listing");
 const Review=require("../models/review");
-
+ 
 module.exports.addreviews=async(req,res)=>{
     let {id}=req.params;
     let {message,rating}=req.body;

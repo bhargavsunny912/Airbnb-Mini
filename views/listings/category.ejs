@@ -3,7 +3,7 @@
 <%- include("filters.ejs") %>
 
 <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 row-cols-xl-3 row-cols-xxl-4">
-    <% for(list of lists) { %>
+    <% for(list of lists) { %> 
         <a href="/listing/<%= list._id %>" class="card-link">
             <div class="card col">
                 <img src="<%= list.image.url %>" class="card-img-top" alt="listings" style="width:15rem;height:17rem">

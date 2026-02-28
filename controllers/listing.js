@@ -8,7 +8,7 @@ module.exports.index=async (req,res)=>{
 module.exports.createlistingform=(req,res)=>{
     res.render("listings/newpost.ejs");
 };
-
+ 
 module.exports.createlisting=async (req,res,next)=>{
     let url=req.file.path;
     let filename=req.file.filename;
