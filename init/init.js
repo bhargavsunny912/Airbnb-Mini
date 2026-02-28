@@ -1,4 +1,4 @@
-const mongoose=require("mongoose");
+const mongoose=require("mongoose"); 
 const intdata=require("./data");
 const Listing=require("../models/listing");
 
